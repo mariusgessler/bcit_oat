@@ -1,0 +1,161 @@
+.main-navigation{
+	position: fixed;
+	bottom: 0;
+	left: 0	;
+	background-color: rgba(233, 233, 233, 0.596);
+	width: 100%;
+	// height: 100px;
+	z-index: 999;
+
+	.menu-main-menu-container {
+		position: relative;
+		width: 92.5%;
+		margin: 0 auto;
+
+	}
+
+	ul{
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		// margin: 40px 5px 0px 5px;
+		// line-height: 100px;
+		text-align: center;
+		padding: 0;
+
+		li{
+		
+			a{
+				.menu-image {
+					padding: 0px;
+					width: 30px;
+					height: 30px;
+
+			
+				}
+				
+				span {
+					display: none;
+				}
+
+				.menu-image-title-after{
+					padding: 0px;
+				}
+			}
+		}
+
+	}
+}
+@media only screen and (min-width: 600px){
+	.main-navigation{
+		ul {
+
+			li {
+				align-self: center;
+
+				a{
+				display: flex;
+				flex-direction: column;
+				line-height: 30px;
+					
+					.menu-image{
+						width: 35px;
+						height: 35px;
+						place-self: center;
+					}
+
+					span {
+						display: inline-block;
+						color: $color__main-theme;
+						font-size: 1.1em;
+						font-weight: 500;		
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+.main-navigation{
+	position: static;
+	background-color: rgba(0, 0, 0, 0);
+	
+	
+	.menu-main-menu-container {
+		margin-top: 27px;
+	
+	}
+
+	ul{
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		line-height: 0;
+
+		li {
+			a {
+				display: inline;
+
+				span {
+					display: inline-block;
+
+				}
+			}
+		}
+
+		li{
+			flex: auto;
+			text-align: center;
+			font-size: 1.1em;
+			font-weight: 500;
+			
+			a{
+				color: $color__main-theme;
+				position: relative;
+				text-decoration: none;
+
+				.menu-image {
+					display: none;
+				}
+				.menu-image-title-after.menu-image-title {
+					padding: 0;
+				}
+			}
+			
+			.menu-image-title-after .menu-image-title:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				bottom: -5px;
+				left: 0;
+				background: $color__main-theme;
+				visibility: hidden;
+				-webkit-transform: scaleX(0);
+				transform: scaleX(0);
+				-webkit-transition: all 0.3s ease-in-out 0s;
+				transition: all 0.3s ease-in-out;
+			}
+			
+			.menu-image-title-after .menu-image-title:hover::after{
+				visibility: visible;
+				-webkit-transform: scaleX(1);
+				transform: scaleX(1);
+			}
+
+		
+		}
+	}
+}
+
+#masthead.site-header .main-navigation .menu-main-menu-container .menu .current-menu-item > .menu-image-title-after .menu-image-title:after{
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+}

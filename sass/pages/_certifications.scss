@@ -1,0 +1,99 @@
+/*--------------------------------------------------------------
+# Certifications Page
+--------------------------------------------------------------*/
+.certifications{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
+    .certification{
+        max-width: 320px;
+        height: 520px;
+        flex-basis: 100%;
+        border: 0.5px solid #E0E0E0;
+        box-shadow: $oat-box-shadow;
+        padding: 0 25px;
+        margin: 50px 0;
+
+        h2 {
+            text-align: center;
+            margin: 25px 0;
+            height: 72px;
+            font-weight: 300;
+            font-size: 1.5em;
+        }
+
+        img {
+            margin: 25px 0;
+        }
+
+        p {
+            margin: 25px 0 50px 0;
+            height: 120px;
+        }
+
+        .more-info-btn{
+            width: 100%;
+        }
+
+        a{
+            display: block;
+            margin: 0 auto;
+            text-decoration: none;
+            width: 140px;
+            padding: 7px 17px;
+            text-align:center;
+            
+            @include oat-button;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 500px){
+    .certifications{
+        .certification{
+            max-width: 320px;
+            height: 520px;
+        }
+    }
+
+}
+
+@media (min-width: 640px){
+    .certifications{
+        .certification{
+            flex-basis: 50%;
+            max-width: 300px;
+            height: 500px;
+        }
+    }
+}
+
+@media (min-width: 890px){
+    .certifications{
+        .certification{
+            max-width: 290px;
+            height: 500px;
+        }
+    }
+}
+
+@media (min-width: 1000px){
+    .certifications{
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1280px){
+    .certifications{
+        .certification{
+            flex-basis: 25%;
+        }
+    }
+}

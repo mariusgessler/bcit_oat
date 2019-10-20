@@ -1,0 +1,253 @@
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+.customize-support {
+    margin: 0 auto;
+}
+
+.contact-page{
+    .container-main {
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        margin: 0 auto;
+    
+        .master-wrapper {
+            justify-items: center;
+            padding: 0px 20px;
+            margin: 0 auto; 
+            width: 100%;    
+    
+        
+            .faculty-staff,
+            .program-info {
+                background-color: $color__main-theme-light;
+                box-shadow: $contact-box-shadow;
+                min-height: 205px;
+                width: auto;
+                line-height: $font__line-height-body;
+                padding: 20px 20px;
+
+                .faculty-numnber,
+                .faculty-email,
+                .program-phone,
+                .program-email,
+                .program-website,
+                .bcit-website {
+                    display: flex;
+                }
+    
+            }   
+        
+            .phone-svg, 
+            .mail-svg,
+            .website-svg {
+                fill: $color__text-input-light;
+                margin-right: 10px;
+            }
+            
+        }
+
+        .faculty-container{
+            margin-top: 50px;
+        }
+    
+        .faculty-container,
+        .program-container {    
+    
+            h2 {
+                color: $color__text-main;
+                text-transform: uppercase;
+            }
+    
+            p {
+                color: $color__text-input-light;
+                margin: 5px;
+            }
+
+            .faculty-name,
+            .program-name {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-bottom: 1px $color__text-input-light solid;
+            }   
+
+            .faculty-staff {
+                height: auto;
+            
+            }
+        
+            .program-info {
+                height: auto;
+            }
+
+            .faculty-staff a,
+            .program-info a {
+                text-decoration: none;
+                color: $color__text-input-light;
+            }
+
+        } 
+    
+    
+        .bcit-map {
+            width: auto;
+            height: 300px;
+            box-shadow: $contact-box-shadow;
+            margin-bottom: 100px;
+        }
+
+        .wpcf7 {
+            width: auto;
+            height: auto;
+        input{
+            width: 100%;
+        } 
+
+        .contact-form-heading {
+        text-transform: uppercase;
+        }
+
+        .wpcf7-form-control.wpcf7-submit {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: #21437A;
+            outline: none;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                background-color: $color__main-theme-light;
+            }    
+        } 
+    }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 500px){
+    .contact-page{
+
+        .master-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: space-evenly;
+            width: 500px;
+    
+    
+            .faculty-container,
+            .program-container {
+                width: 500px;
+    
+                .faculty-staff {
+                    width: 500px;
+                }
+                
+                .program-info {
+                    width: 500px;
+                }
+    
+            }
+    
+            .wpcf7 {
+                width: 500px;
+    
+                input{
+                    width: 500px;
+                }
+            }
+            
+            .bcit-map {
+                width: 500px;
+            }
+        }
+    }
+}
+// Media Query at 700
+@media only screen and (min-width: 700px){
+
+    .contact-page{
+        .master-wrapper {
+            width: 1000px;
+            
+            .faculty-container,
+            .program-container {
+                width: 600px;
+    
+                .faculty-staff {
+                    width: 600px;
+                
+                }
+                
+                .program-info {
+                    width: 600px;
+                }
+    
+            }
+    
+            .wpcf7 {
+                width: 600px;
+    
+                input{
+                    width: 600px;
+                }
+            }
+            
+            .bcit-map {
+                width: 600px;
+            }
+        }
+    }
+}
+
+// Media Query at 1100
+@media only screen and (min-width: 1100px){
+
+    .contact-page{
+
+        .master-wrapper {
+        
+            .faculty-container,
+            .program-container {
+                margin-right: 50px;
+                width: 450px;
+    
+                .faculty-staff {
+                    width: 450px;
+                
+                }
+                
+                .program-info {
+                    width: 450px;
+                }
+    
+            }
+
+            .wpcf7-form{
+                margin-top: 50px;
+            }
+    
+            .wpcf7 {
+                width: 550px;
+    
+                input{
+                    width: 550px;
+                }
+            }
+            
+            .bcit-map {
+                width: 1200px;
+            }
+        }
+    }
+}

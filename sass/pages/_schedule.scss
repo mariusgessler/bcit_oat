@@ -1,0 +1,279 @@
+/*--------------------------------------------------------------
+# Schedule Page
+--------------------------------------------------------------*/
+
+.schedule-calendar {
+    display: none;
+}
+
+.schedule-list {
+
+    margin-bottom: 120px;
+    
+    .swiper-navigation{
+        margin: 0 auto;
+    }
+    
+    h1{
+        text-align: center;
+        margin: 0;
+        font-weight: 400;
+        
+    }
+
+    .schedule-header {
+        height: 50px;
+        position: relative;
+        margin: 20px;
+    }
+
+    .buttons {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 2;
+    }
+  
+    .grid-container {
+        margin: 0 auto;
+        display: grid;
+        grid-row-gap: 15px;
+        height: 100%;
+        width: 350px;
+        max-width: 100%;
+        overflow: auto;
+        border-top: 2px solid rgba(128, 128, 128, 0.507);
+        padding-bottom: 40px;
+    }
+
+    .grid-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 310px;
+        width: 100%;
+        height: 150px;
+        margin: 0 auto;
+        box-shadow: $oat-box-shadow;
+        border-radius: 4px;
+
+         
+
+
+        .date {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:rgba(231, 231, 231, 0.507);
+            max-width: 100px;
+            width: 100%;
+            padding: 15px;
+            border-right: 2px solid $color__main-theme;
+
+           
+
+
+
+            p {
+                margin: 0;
+                font-weight: 400;
+
+            }
+
+            
+
+
+        }
+
+        .day-info {
+            max-width: 210px;
+            width: 100%;
+            padding-left: 15px;
+            background-color: rgba(236, 236, 236, 0.205);
+            box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: rgba(0, 0, 0, 0.719);
+
+            p {
+                margin: 0;
+            }
+           
+        }
+
+        .class {
+            font-weight: 400;
+            color:black;
+        }
+
+    }
+
+    .weekend {
+        .date{
+        background-color: $color__main-theme-light;
+        border-right: 2px solid rgb(255, 166, 0);
+        color: white;
+        }
+
+        .day-info {
+            background-color:rgba(231, 231, 231, 0.493);
+
+        }
+    }
+   
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 600px){
+    .schedule-list {
+        margin-bottom: 160px;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .schedule-list {
+
+        .grid-container {
+            width: 550px;
+    
+            .grid-item{
+                max-width: 500px;
+                flex-direction: row;
+                height: 120px;
+
+                .day-info{
+                    max-width: 350px;
+                    flex-direction: row;
+                    align-items: center;
+                    display: grid;
+                    grid-template-columns: 1fr 0.8fr;
+                    grid-gap: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .schedule-list {
+        display: none;
+    }
+
+    .schedule-calendar {
+        display: block;
+    }
+
+}
+
+/*--------------------------------------------------------------
+# Schedule Calendar
+--------------------------------------------------------------*/
+
+.schedule-calendar {
+   margin: 60px auto;
+   max-width:1000px;
+   position: relative;
+
+   .schedule-header {
+       margin-top: 40px;
+   }
+
+    button  {
+        width: 150px;
+        height: 35px; 
+        position: absolute;   
+        right: 0;
+        top: 7px;
+        @include oat-button; 
+    }
+
+    .calendar{
+        box-shadow: $oat-box-shadow;
+    }
+
+   .day-info {
+       height: 130px;
+       width: 100px;
+       display: flex;
+       flex: 1;
+       flex-direction: column;
+       justify-content: start;   
+    }
+  
+    .weekdays-grid,
+    .date-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 0.1%;
+    }
+
+    .weekdays-grid{
+        color: white;
+        text-align: center;
+
+        .weekday {
+            background-color:$color__main-theme-light;
+            line-height: 50px;
+            margin:0;
+            vertical-align: middle;
+        }      
+    }
+
+    .day-of-month {
+        height: 210px;
+        background-color:rgba(231, 231, 231, 0.493);
+        padding: 15px 15px 0 ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .beginning-month,
+    .end-month {
+        background-color:rgba(231, 231, 231, 0.856);
+    }
+
+    .date{
+        color: rgba(55, 111, 201, 0.486);
+        font-size: 2rem;
+        margin-left: 75%;
+        margin-bottom: 0px;
+    }
+
+    .date-holiday {
+        color: rgba(36, 36, 36, 0.411);
+        font-size: 2rem;
+        margin-left: 75%;
+        margin-bottom: 0px;
+    }
+
+    .class {
+        color: $color__main-theme;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .holiday .class {
+        color:rgb(255, 166, 0);
+    }
+
+    .room {
+        font-size: 0.9rem;
+    }
+
+    .instructor {
+        font-weight: 400;
+    } 
+}

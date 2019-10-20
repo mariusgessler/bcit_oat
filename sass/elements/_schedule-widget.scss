@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+# SchHome Page
+--------------------------------------------------------------*/
+
+.schedule-widget{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 310px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.712);
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.089), 0 15px 40px rgba(166, 173, 201, 0.233);
+    border-radius: 7px;
+
+
+    p {
+        margin: 0;
+        color: rgb(44, 44, 44);
+    }
+
+    .widget-date{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        p {
+            width: 60px;
+        }
+
+      
+
+        .widget-day {
+            font-weight: 400;
+            font-size: 2.5em;
+        }
+        .widget-month {
+            font-weight: 400;
+            font-size: 1.3em;
+            margin-top: -20px;
+            text-transform: uppercase;
+            padding: 7px 0;
+        }
+
+        .widget-weekday {
+            font-weight: 300;
+            margin-top: -10px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        
+    }
+
+    .widget-info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        border-left: 3px solid white;
+        justify-content: center;
+
+        .widget-class {
+            font-size: 1rem;
+            line-height: 19px;
+        }
+
+        h3 {
+            color: white;
+            margin: 0;
+            font-weight: 400;
+            font-size: 1.3em;
+            color: $color__main-theme;
+            padding-bottom: 5px;
+        }
+    }
+
+    .widget-instructor,
+    .widget-room  {
+        font-weight: 300;
+        font-size: 1rem;
+
+
+
+
+    }
+}
+
+/*--------------------------------------------------------------
+# Media Query
+--------------------------------------------------------------*/
+
+@media (min-width: 900px){
+    .schedule-widget{
+        top: 55%;
+        left: 25%;
+
+        // .widget-date{
+        //     .widget-month{
+        //         padding: 7px 0;
+        //     }
+
+        //     .widget-info{
+        //         h3{
+        //             padding-bottom: 5px;
+        //         }
+        //     }
+        // }
+    }
+}

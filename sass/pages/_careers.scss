@@ -1,0 +1,217 @@
+/*--------------------------------------------------------------
+# Careers Page
+--------------------------------------------------------------*/
+
+.careers-wrapper{
+    width: 90%;
+    max-width: 1550px;
+    margin: 75px auto 100px;
+
+    h2{
+        margin: 75px auto 25px;
+    }
+}
+
+.jobPostings{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:  20px 20px;
+    margin: 0 auto;
+    .posting{
+        background-color: #F8F8F8;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+        padding: 10px 20px;
+
+        .title{
+            font-weight: 400;
+            height: 150px;
+            margin: 0 auto;
+            padding: 0;
+            font-size: 1.25em;
+            
+            a{
+                color: #707070;
+            }
+        }
+
+        .description{
+            display: none;
+        }
+         
+        .jobInfo{
+            display: flex;
+            justify-content: space-between;
+            .pubDate{
+                margin: 0;
+                padding: 0;
+                font-weight: 300;
+                font-size: 0.9em;
+            }
+            
+            .viewJob{
+                color: white;
+                border: 1px solid $color__main-theme-light;
+                background-color: $color__main-theme-light;
+                //21437A
+                padding: 5px 10px;
+                text-align: center;
+                border-radius: 20px;
+                transition: all 0.3s ease;
+                font-size: 0.9em;
+
+                &:hover{
+                    color: $color__main-theme-light;
+                    background-color: white;
+                }
+            }
+        }
+
+    }
+}
+
+.careerToggle{
+    background-color: #F8F8F8;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    margin: 25px auto;
+    width: 100%;
+
+    .careersBtn{
+        cursor: pointer;
+        background-color: #F8F8F8;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #D0D0D0;
+        text-align: left;
+        font-size: 1.5em;
+        color: #707070;
+        display: flex;
+        justify-content: space-between;
+        
+        .fa-chevron-down{
+            transition: all 1s ease;
+            color: #707070;
+        }
+
+        .active{
+            transform: rotate(180deg);
+            transition: all 1s ease;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        span {
+            font-size: 0.9em;
+        }
+    }
+
+    .careerLinks{
+        display: none;
+
+        ul {
+            margin: 0;
+            padding: 20px 24px;
+            li {
+                list-style: none;
+
+                a{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.viewMore{
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin: 50px auto;
+
+    .viewMoreBtn{
+        display: inline-block;
+        padding: 7.5px 15px;
+        text-align: center;
+
+        @include oat-button;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+
+@media (min-width: 640px){
+    .jobPostings{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 1024px){
+    .careers-wrapper{
+        // padding: 0 50px 0 50px;
+    }
+
+    .jobPostings{
+        .posting{    
+            .title{
+                font-size: 1.5em;
+            }
+             
+            .jobInfo{
+                display: flex;
+                justify-content: space-between;
+                .pubDate{
+                    font-size: 1em;
+                }
+                
+                .viewJob{
+                    padding: 7.5px 15px;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px){
+    .careers-wrapper{
+        // padding: 0 0 0 100px;
+
+        h2{
+            max-width: 1280px;
+        }
+    }
+    .jobPostings{
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1280px;
+    }
+
+    .careerToggle, .viewMore{
+        max-width: 1280px;
+    }
+}
+
+@media(min-width: 1600px){
+
+    // .careers-wrapper{
+    //     h2{
+    //         max-width: 1280px;
+    //     }
+    // }
+
+    // .jobPostings{
+    //     max-width: 1280px;
+    // }
+
+    // .careerToggle{
+    //     max-width: 1280px;
+    // }
+
+    // .viewMore{
+    //     max-width: 1280px;
+    // }
+}
