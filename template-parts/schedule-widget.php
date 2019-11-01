@@ -95,14 +95,14 @@ while ($query->have_posts()):
             <?php elseif ($weekdayUI == "Fri" && date("H") >= 17):?>
                 <h3>Mondays's class</h3>
                 <p class="widget-class ">
-                    <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][2]) ?> 
+                    <?php echo ($schedule[$currentMonth][$tomorrow + 2 - $firstDayOfMonth][2]) ?> 
                 </p>
                 <p class="widget-instructor ">
-                    <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][4]) ?>
+                    <?php echo ($schedule[$currentMonth][$tomorrow + 2 - $firstDayOfMonth][4]) ?>
                 </p>
                 <?php if ($schedule[$month][$tomomorrow + 2][5] != 1): ?>
                     <p class="widget-room ">
-                    Room:  <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][3]) ?>
+                    Room:  <?php echo ($schedule[$currentMonth][$tomorrow + 2 - $firstDayOfMonth][3]) ?>
                     </p>
                 <?php endif; ?>
 
